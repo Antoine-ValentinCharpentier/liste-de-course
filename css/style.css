@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+.header .boxs{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 5em;
+}
+
+.header .box{
+    /*background-color: white;*/
+    border-radius: 2em;
+    /*border: 0.15em solid #E8E8E8;*/
+    width: 30%;
+    display: grid;
+    grid-gap:0;
+    grid-template-columns: 20% 80%;
+    float: left;
+    padding-left: calc(8/3);
+}
+
+.header .boxmargin{
+    margin-left: 4%;
+}
+
+.header .left{
+    grid-area:"left-box";
+    display: flex;
+    /*border-right: 0.15em solid #E8E8E8;*/
+}
+
+.header .left input[type=image]{
+    margin: auto;
+}
+.header .right{
+    grid-area:"right-box";
+    padding-left: 1em;
+}
+
+.header .left input[type=image]{
+    border-radius: 50%;
+    border: 0.2em solid #606060;
+    width: 2.5em;
+    padding: 0.5em;
+}
+
+.header .left input[type=image]:hover{
+    animation-name: rotateIn;
+    animation-duration: 1s;
+}
+
+
+.header .title_profil, .header .boxs h1{
+    font-family: 'Lato';
+    color: #7A7A7A;
+    letter-spacing: 0.05em;
+    font-size: 3em;
+    padding-top: 3em;
+    font-weight: lighter;
+}
+
+.header .boxs h1{
+    font-weight: bold;
+    padding-top: 0;
+    font-size: 1.5em;
+}
+
+.header .boxs p{
+    padding-top: 0;
+    font-family: 'Lato';
+    color: #7A7A7A;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    font-weight: lighter;
+}
+.header .boxs p strong{
+    font-weight: bold;
+}
+
+
+.header .mid_trait{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 40%;
+    height: 0.15em;
+    background: #E8E8E8;
+}
+
+.header{
+    background-color: #F7F7F7;
+    min-height: 100vh;
+    border-bottom: 0.15em solid #E8E8E8;
+    box-shadow: 0 1px 8px #606060;
+}
+
+.header nav{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.header li a {
+    text-decoration: none;
+    color: #606060;
+    font-family: 'Lato';
+    font-size: 2vw;
+    font-weight: lighter;
+}
+
+.header li a:hover {
+    font-weight: bold;
+    border-bottom: 0.2em solid #606060;
+}
+
+
+.header li{
+    float: left;
+    padding: 1em 1em;
+}
+
+.header ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*BANDEAU NB ACHAT RESTANT*/
+.nb_achat_restant{
+    background-color: #F8F8F8; 
+    border-top: 0.15em solid #E8E8E8;
+    border-bottom: 0.15em solid #E8E8E8;
+    box-shadow: 0 1px 8px #606060;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.nb_achat_restant p, .ajout_produit p,.ajout_achat p{
+    margin: 0;
+    font-family: 'Lato';
+    font-size: 1.5em;
+    color: #7A7A7A;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+}
+
+.nb_achat_restant .title, .ajout_produit .title, .ajout_achat .title{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/*ARTICLE A ACHETER*/
+.trait {
+    text-align: center;
+    position: relative;
+}
+
+.trait:before {
+    content: "";
+    left: 0;
+    right: 0;
+    height: 0.15em;
+    background: #E8E8E8;
+    position: absolute;
+    top: calc(50% - 0.075em);
+    z-index: 0;
+}
+
+.trait p {
+    display: inline-block;
+    padding: 0 3vw;
+    background: white;
+    position: relative;
+    z-index: 1;
+}
+
+.article_photo_produit img{
+    border-radius: 1vw;
+
+    max-height: 13em;
+
+    animation-duration: 0.75s;
+    animation-name: bounceIn;
+}
+
+.article_form form input[type=submit]{
+    border-radius: 50%;
+    border: 0.2em solid #606060;
+    height: 3.5em;
+    width: 3.5em;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.article_form form input[type=submit]:hover{
+    animation-name: rotateIn;
+    animation-duration: 1s;
+}
+
+.article_form input[type=text]{
+    width: 50%;
+    transition: width 0.4s ease-in-out;
+    box-sizing: border-box;
+    border: 2px solid #606060;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: white;
+    background-image: url('./price.svg');
+    background-position: 9px 9px; 
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 6px 0px 6px 40px;
+}
+
+.article_form input[type=text]:focus {
+  width: 70%;
+}
+
+.article_container .left p, .trait p, .article_form p{
+    font-family: 'Lato';
+    font-size: 1.5em;
+    color: #7A7A7A;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+}
+
+.article_container .left p, .article_form p{
+    animation-name: heartBeat;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+.article_container .left p strong, .article_form p strong{
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    font-size: 1em;
+    color: #606060;
+}
+.sac{
+    height: 8em;
+    margin-top: 2.5em;
+}
+@media screen and (min-width: 1030px) {
+    .article_container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .flex-container {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 1030px) {
+    .article_container .left{
+        text-align: center;
+    }
+    .article_photo_produit img{
+        height: 0;
+        width: 0;
+    }
+
+    .header li a {
+        font-size: 3vw;
+    }
+
+    .header .box{
+        float: none;
+        width: 100%;
+        
+    }
+
+    .header .boxmargin{
+        margin-left: 0;
+    }
+
+}
+
+
+.article_container .left, .article_container .article_form, .article_container .article_photo_produit, .article_container .article_form p{
+    margin:0 auto;
+}
+
+.article_container .left, .article_container .article_form, .article_container .article_photo_produit{
+    margin-bottom: 2.5em;
+}
+
+.article_container .article_form{
+    text-align: center;
+}
+
+/*AJOUT PRODUIT*/
+
+
+.ajout_produit, .ajout_achat{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.ajout_produit form label{
+    display: block;
+}
+
+.box_select select, .ajout_produit form input[type=submit],.ajout_produit form input[type=text],.ajout_produit form label p,.ajout_achat form input[type=submit],.ajout_achat form input[type=text]{
+    font-family: 'Lato';
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.2em;
+    width: 70%;
+    font-size: 15px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+.ajout_produit form center{
+    width:70%;
+    margin: 0 auto;
+}
+
+.ajout_produit form input[type=file]{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ajout_produit form input[type=text],.ajout_produit form label,.ajout_achat form input[type=text], .box_select select{
+    color: #606060;
+    background-color: white;
+    border: 0.1em solid #606060;
+}
+
+.ajout_produit form input[type=submit],.ajout_achat form input[type=submit]{
+    background-color: #606060;
+    border: none;
+    color: white;
+}
+
+.petit_trait{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 30%;
+    height: 0.15em;
+    background: #E8E8E8;
+}
+
+.add_produit_achat{
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.flex-container > div {
+  text-align: center;
+  width: 100%;
+}
+
+
+.flex-container > div > p{
+    padding-top: 1em;
+}
+
+.box_select select, .ajout_produit form input[type=submit],.ajout_produit form input[type=text],.ajout_produit form label,.ajout_achat form input[type=submit],.ajout_achat form input[type=text]{
+    margin-top: 0.75em;
+}
